@@ -6,6 +6,7 @@ Algumas configurações que talvez sejam necessárias:
 * Utilizei um banco de Dados Mysql8 local e talvez seja preciso alterar as configurações de DataSource no arquivo src/main/resources/application.properties.
 
 #Rotas
+
 *POST /cities - Body { "name": "string", "provincy": { "name": "string" } } - Cadastrar cidade
 *GET /cities - Lista todas as cidades
 *POST /cities - Body: { "name": "string" } - Consultar cidade por parte do nome
