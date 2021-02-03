@@ -7,13 +7,13 @@ Algumas configurações que talvez sejam necessárias:
 
 #Rotas
 
-*POST /cities - Body { "name": "string", "provincy": { "name": "string" } } - Cadastrar cidade
-*GET /cities - Lista todas as cidades
-*POST /cities - Body: { "name": "string" } - Consultar cidade por parte do nome
-*POST /cities/byProvincyName - Body: { "name": "string" } - Consultar cidade pelo estado
+* POST /cities - Body { "name": "string", "provincy": { "name": "string" } } - Cadastrar cidade
+* GET /cities - Lista todas as cidades
+* POST /cities - Body: { "name": "string" } - Consultar cidade por parte do nome
+* POST /cities/byProvincyName - Body: { "name": "string" } - Consultar cidade pelo estado
 
-*POST /customers - Body { "name": "string", "sex": "Enum(MALE, FEMALE, OTHERS)", "birthDate": "0000-00-00", "age": number, "city": { "id": number } }
-*GET /customers/id - pathparam {id} : id do cliente - Consultar cliente pelo Id
-*GET /customers/byName - Body: { "name": "string" } - Consultar Cliente pelo nome
-*DELETE /customers/id - pathparam {id} : id do cliente - Remover Cliente 
-*PUT /customers/id - Body: {"name": "string"} - Alterar o nome do cliente
+* POST /customers - Body { "name": "string", "sex": "Enum(MALE, FEMALE, OTHERS)", "birthDate": "0000-00-00", "age": number, "city": { "id": number } }
+* GET /customers/id - pathparam {id} : id do cliente - Consultar cliente pelo Id
+* GET /customers/byName - Body: { "name": "string" } - Consultar Cliente pelo nome
+* DELETE /customers/id - pathparam {id} : id do cliente - Remover Cliente 
+* PUT /customers/id - Body: {"name": "string"} - Alterar o nome do cliente
