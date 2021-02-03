@@ -71,6 +71,10 @@ public class CustomerService {
 
 		return result;
 	}
+	
+	public List<CustomerDTO> findByName(String name){
+		return entityListToDTO(this.repo.findByNameLike(name));
+	}
 
 	private CustomerDTO entityToDTO(Customer customer) {
 		CustomerDTO result = null;

@@ -85,7 +85,7 @@ public class ComplexotestApplication {
 			cust.setAge(25);
 			cust.setBirthDate(LocalDate.of(1995, 12, 28));
 			cust.setCity(c);
-			cust.setName("Maria das Dores");
+			cust.setName("maria das Dores");
 			cust.setSex(EnumSex.FEMALE);
 			
 			custRepo.save(cust);

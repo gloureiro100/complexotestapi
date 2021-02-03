@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gabriel.albuquerque.complexotest.DTO.CustomerDTO;
+import com.gabriel.albuquerque.complexotest.DTO.FindByNameDTO;
 import com.gabriel.albuquerque.complexotest.services.CustomerService;
 
 @RestController
@@ -44,6 +45,11 @@ public class CustomerController {
 
 		return ResponseEntity.notFound().build();
 	}
+	
+	@PostMapping(path = "byName")
+	public List<CustomerDTO> findByName(@RequestBody FindByNameDTO dto) {		
+		return this.service.findByName(dto.getName());
+	}
 
 	@GetMapping(path = { "/{id}" })
 	public ResponseEntity<CustomerDTO> findById(@PathVariable long id) {
@@ -61,5 +67,5 @@ public class CustomerController {
 	public ResponseEntity<CustomerDTO> update(@PathVariable("id") long id, @RequestBody CustomerDTO customer) {
 		CustomerDTO result = this.service.updateCustomer(id, customer);
 		return result != null ? ResponseEntity.ok().body(result) : ResponseEntity.notFound().build();
-	}
+	}	
 }
